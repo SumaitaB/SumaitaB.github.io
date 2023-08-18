@@ -14,7 +14,7 @@ $('#lan').hide();
 
 $(document).ready(function(){
 
-	$.getJSON("https://api.countapi.xyz/hit/tanusreesharma.github.io/634c2142-b35d-430e-b51c-dad16880dd3a", function(response) {
+	$.getJSON("https://api.countapi.xyz/hit/SumaitaB.github.io/634c2142-b35d-430e-b51c-dad16880dd3a", function(response) {
 		$("#contadorVisitas").text(response.value);
 	});
 
@@ -212,7 +212,7 @@ $(document).ready(function(){
 	});
 	*/
 
-	// Whenever you clic on a blog post, you should be redirected to that post' html
+	// Whenever you click on a blog post, you should be redirected to that post' html
 	$('.clickable').click(function(e) {
 		window.open($(e.currentTarget)[0].childNodes[1].innerText, '_blank').focus();
 	});
@@ -341,7 +341,7 @@ function scrollToContent(divId) {
 }
 
 function resetViews() {
-	$.getJSON("https://api.countapi.xyz/set/ron352.github.io/634c2142-b35d-430e-b51c-dad16880dd3a?value=0", function(response) {
+	$.getJSON("https://api.countapi.xyz/set/SumaitaB.github.io/634c2142-b35d-430e-b51c-dad16880dd3a?value=0", function(response) {
 		$("#contadorVisitas").text("0");
 	});
 }
