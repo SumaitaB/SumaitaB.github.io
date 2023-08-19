@@ -5,6 +5,7 @@ $('#experienceContent').hide();
 $('#conferencesContent').hide();
 $('#projectsContent').hide();
 $('#tutorialsContent').hide();
+$('#volunteeringContent').hide();
 $('#teachingContent').hide();
 /* Template
 $('#nameContent').hide();
@@ -192,6 +193,23 @@ $(document).ready(function(){
 			activateDiv('#projectsContent');
 		}
 	});
+		// Handle 'Cocurriculars/Volunteering' content
+		$('#volunteering').click(function(e) {
+
+			// If the div has already the class active, no need to reload the divs...
+			if(!$(e.target).hasClass('active')) {
+				// Update navbar
+				clearActiveLinks();
+				activateLink(e);
+	
+				// Hide other contents
+				clearActiveDivs();
+	
+				// Show current content
+				activateDiv('#volunteeringContent');
+			}
+		});
+	
 
 	/*
 	// Handle 'Template' content
