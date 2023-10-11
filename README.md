@@ -1,3 +1,3 @@
 # SumaitaB.github.io
 
-<h2>Link: https://sumaitab.github.io/ </h2>
+<h1>Link: https://sumaitab.github.io/ </h1>
