@@ -7,6 +7,7 @@ $('#projectsContent').hide();
 $('#tutorialsContent').hide();
 $('#volunteeringContent').hide();
 $('#teachingContent').hide();
+$('#certificationsContent').hide();
 /* Template
 $('#nameContent').hide();
 */
@@ -73,6 +74,22 @@ $(document).ready(function(){
 			activateDiv('#aboutmeContent');
 		}
 
+	});
+	   // Handle 'Certifications' content
+	   $('#certifications').click(function(e) {
+
+		// If the div has already the class active, no need to reload the divs...
+		if(!$(e.target).hasClass('active')) {
+			// Update navbar
+			clearActiveLinks();
+			activateLink(e);
+
+			// Hide other contents
+			clearActiveDivs();
+
+			// Show current content
+			activateDiv('#certificationsContent');
+		}
 	});
 
 	// Handle 'Education' content
@@ -212,6 +229,8 @@ $(document).ready(function(){
 	
 
 	/*
+
+ 
 	// Handle 'Template' content
 	$('#name').click(function(e) {
 
