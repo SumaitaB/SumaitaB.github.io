@@ -16,7 +16,8 @@ h1, h2, h3, h4, b {
 }
 
 #top-nav {
-	background-color: var(--nv-color) !important;
+	background-color: #221C36 !important;
+	border-bottom: 1px solid #332A4F;
 }
 
 .nav-link {
@@ -24,7 +25,12 @@ h1, h2, h3, h4, b {
 }
 
 .nav-link:hover{
-	color: rgba(255, 255, 255, 0.7) !important;
+	color: #C9C2FF !important;
+}
+
+.nav-link.active {
+	color: #C9C2FF !important;
+	font-weight: 500;
 }
 
 .link-dark {
@@ -43,20 +49,56 @@ h1, h2, h3, h4, b {
 	box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.7) !important;
 }
 
-/* OPTION BUTTON */
-.options-button {
-	background-color: var(--bs-gray-700);
-	border: 1px solid #fff;
+/* EDUCATION CARDS */
+.edu-card {
+	background-color: #434343;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-left-color: #a49df0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-#options-toggler {
-	box-shadow: 0px 3px 50px rgba(0,0,0,0.2);
+.edu-card:hover {
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
 }
 
-#options-toggler:hover {
-	box-shadow: 0px 3px 50px rgba(0,0,0,0.3);
+.edu-degree {
+	color: #fff;
 }
 
-#theme:hover, #lan:hover {
-	background-color: var(--bg-color);
+.edu-meta {
+	color: #c3c8d1;
 }
+
+.honor-date {
+	color: #b6bcc6;
+}
+
+/* Lighter than the light-mode purple so it stays readable on the dark background */
+.entry-date {
+	color: #B9AFF5;
+}
+
+.entry-link {
+	color: #5DCAA5 !important;
+}
+
+a:hover .entry-link {
+	color: #9FE1CB !important;
+}
+
+.abme-honors-bullet::before {
+	background-color: #a49df0;
+}
+
+.project-link {
+	color: #c9c2ff;
+	background-color: rgba(164, 157, 240, 0.16);
+	border-color: rgba(164, 157, 240, 0.35);
+}
+
+.project-link:hover {
+	color: #ded9ff;
+	background-color: rgba(164, 157, 240, 0.28);
+	border-color: rgba(164, 157, 240, 0.55);
+}
+
