@@ -14,8 +14,45 @@ a {
 	margin-top: 1em;
 }
 
+.honors-list {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 28px;
+}
+
 .abme-honors-bullet{
 	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.65;
+
+	position: relative;
+	padding-left: 22px;
+}
+
+/* Custom marker, vertically centred on the first line of text */
+.abme-honors-bullet::before {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: .62em;
+
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+}
+
+.honors-list .abme-honors-bullet + .abme-honors-bullet {
+	margin-top: 10px !important;
+}
+
+.honor-date {
+	font-size: .85em;
+	white-space: nowrap;
+}
+
+.honor-date::before {
+	content: " — ";
+	white-space: pre;
 }
 
 /* GENERAL CSS */
@@ -68,6 +105,54 @@ li > .active {
 	padding-left: 15px;
 }
 
+/* EDUCATION CARDS */
+.edu-list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 6px 0 28px;
+}
+
+.edu-card {
+	border-radius: 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	padding: 14px 20px;
+	transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.edu-card:hover {
+	transform: translateY(-1px);
+}
+
+.edu-degree {
+	font-weight: 600;
+	font-size: 1.02em;
+	line-height: 1.45;
+	margin-bottom: 4px;
+}
+
+.edu-meta {
+	font-size: .94em;
+	line-height: 1.75;
+}
+
+@media (max-width: 575px) {
+	.edu-card {
+		padding: 12px 15px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.edu-card {
+		transition: none;
+	}
+	.edu-card:hover {
+		transform: none;
+	}
+}
+
 .pub-year-h2 {
 	font-size: 3.2em;
 	font-weight: 100;
@@ -89,71 +174,110 @@ li > .active {
 	margin-left: 10px !important;
 }
 
-/* OPTION BUTTON */
-.options-button {
-    position: fixed;
-	
-    height: 50px;
-    width: 50px;
-	cursor: pointer;
-
-    border-radius: 100%;
-	
-	bottom: 25px;
-	right: 25px;
-
-	display: inline-block;
-
-	font-size: 1.2em;
-	vertical-align: middle;
-	text-align: center;
-
-	padding-top: .35em;
-}
-
 .options-button i, img {
 	margin: auto;
 	z-index: -999;
 }
 
-#options-toggler {
-	transition: .2s;
+/* LIGHT / DARK MODE SWITCH */
+#theme-switch {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	z-index: 1030;
+
+	width: 76px;
+	height: 34px;
+	padding: 0;
+	border: none;
+	border-radius: 999px;
+
+	background-color: #16202c;
+	cursor: pointer;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+
+	-webkit-tap-highlight-color: transparent;
+	transition: box-shadow .2s ease;
 }
 
-#options-toggler:hover {
-	transform: scale(1.09,1.09);
+#theme-switch:hover {
+	box-shadow: 0 3px 26px rgba(0, 0, 0, 0.4);
 }
 
-#theme {
-	height: 40px;
-    width: 40px;
-
-	bottom: 85px !important;
-	right: 30px !important;
-
-	font-size: 1em;
-
-	-webkit-transition: background-color .5s; /* For Safari 3.0 to 6.0 */
-    transition: background-color .5s; /* For modern browsers */
+#theme-switch:focus-visible {
+	outline: 2px solid #f5c451;
+	outline-offset: 3px;
 }
 
-#lan {
-	height: 40px;
-    width: 40px;
+#theme-switch .ts-track {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
-	bottom: 130px;
-	right: 30px;
-
-	font-size: 1em;
-
-	-webkit-transition: background-color .5s; /* For Safari 3.0 to 6.0 */
-    transition: background-color .5s; /* For modern browsers */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 9px;
 }
 
-.lang-flag {
+#theme-switch .ts-track .ts-icon {
+	width: 15px;
 	height: 15px;
-    width: 22.5px;
-	vertical-align:	0px;
+}
+
+#theme-switch .ts-sun {
+	color: #f5c451;
+}
+
+#theme-switch .ts-track .ts-moon {
+	color: #e6ebf2;
+}
+
+#theme-switch .ts-knob {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	z-index: 2;
+
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: #fff;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #16202c;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+	transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+#theme-switch .ts-knob .ts-icon {
+	width: 16px;
+	height: 16px;
+}
+
+/* Knob shows the mode you are in; the track shows the one you can switch to */
+#theme-switch .ts-knob .ts-moon,
+#theme-switch.is-dark .ts-knob .ts-sun {
+	display: none;
+}
+
+#theme-switch.is-dark .ts-knob .ts-moon {
+	display: block;
+}
+
+#theme-switch.is-dark .ts-knob {
+	transform: translateX(42px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#theme-switch .ts-knob {
+		transition: none;
+	}
 }
 
 /* BLOG - Related */
@@ -208,6 +332,38 @@ li > .active {
 	transform: scale(1.03,1.03);
 }
 
+/* PROJECT CARDS - same look as .clickable, but the card itself is not a link */
+.project-card {
+	border-radius: 20px;
+	border: 2px #D9DDDC solid;
+	padding: 15px;
+	box-shadow: 0px 3px 50px rgba(0,0,0,0.2);
+}
+
+.project-link {
+	display: inline-block;
+	margin-top: 14px;
+
+	font-size: .9em;
+	font-weight: 500;
+	text-decoration: none;
+
+	padding: 5px 14px;
+	border-radius: 999px;
+	border: 1px solid transparent;
+
+	transition: background-color .2s ease, border-color .2s ease;
+}
+
+.project-link::after {
+	content: " ↗";
+}
+
+.project-link:focus-visible {
+	outline: 2px solid #6E56CF;
+	outline-offset: 2px;
+}
+
 /* MEDIA QUERIES */
 /* BIGGER SCREENS */
 @media (min-width: 768px) {
@@ -227,6 +383,6 @@ li > .active {
 	}
 	
 	.abme-honors-bullet{
-		margin-left: 40px;
+		margin-left: 0;
 	}
 }
