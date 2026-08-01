@@ -63,10 +63,29 @@
 
 	<body>
 
-		<!-- Bottom rounded button -->
-		<div class="options-button" id="options-toggler"><i class="fa-light fa-arrows-repeat"></i></div>
-		<div class="options-button" id="theme"><i class="fa-duotone fa-lightbulb"></i></div>
-		<div class="options-button" id="lan"><img class="lang-flag" src="/assets/img/en_flag.webp" alt="Flag indicating the english language is selected"></div>
+		<!-- Light / dark mode switch -->
+		<button type="button" id="theme-switch" role="switch" aria-checked="false" aria-label="Toggle dark mode" title="Toggle light / dark mode">
+			<span class="ts-track">
+				<svg class="ts-icon ts-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+					<circle cx="12" cy="12" r="4.5"/>
+					<path d="M12 1.4v2.6M12 20v2.6M22.6 12H20M4 12H1.4M19.5 4.5l-1.9 1.9M6.4 17.6l-1.9 1.9M19.5 19.5l-1.9-1.9M6.4 6.4L4.5 4.5"/>
+				</svg>
+				<svg class="ts-icon ts-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+					<path d="M17.2 3.3l.63 1.37 1.37.63-1.37.63-.63 1.37-.63-1.37-1.37-.63 1.37-.63z" fill="currentColor" stroke-width="0.9"/>
+				</svg>
+			</span>
+			<span class="ts-knob">
+				<svg class="ts-icon ts-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+					<circle cx="12" cy="12" r="4.5"/>
+					<path d="M12 1.4v2.6M12 20v2.6M22.6 12H20M4 12H1.4M19.5 4.5l-1.9 1.9M6.4 17.6l-1.9 1.9M19.5 19.5l-1.9-1.9M6.4 6.4L4.5 4.5"/>
+				</svg>
+				<svg class="ts-icon ts-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+					<path d="M17.2 3.3l.63 1.37 1.37.63-1.37.63-.63 1.37-.63-1.37-1.37-.63 1.37-.63z" fill="currentColor" stroke-width="0.9"/>
+				</svg>
+			</span>
+		</button>
 
 
 		<!-- Navbar  -->
@@ -78,45 +97,52 @@
 				<div class="navbar-collapse collapse flex-grow-1 justify-content-center" id="collapsingNavbar3">
 					<ul class="navbar-nav mx-auto language" id="navbarList">
 						<li class="nav-item">
-							<a class="nav-link active" id="aboutme" href="#" 
-								
-								data-en="About Me">
+							<a class="nav-link active" id="aboutme" href="#"
+
+								data-en="About">
 							</a>
 						</li>
-						
+
 						<li class="nav-item">
-							<a class="nav-link" id="publications" href="#" 
-							
+							<a class="nav-link" id="education" href="#"
+
+								data-en="Education">
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" id="publications" href="#"
+
 								data-en="Publications">
 						</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="projects" href="#" 
-		
+							<a class="nav-link" id="projects" href="#"
+
 								data-en="Projects">
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="teaching" href="#" 
-								
+							<a class="nav-link" id="teaching" href="#"
+
 								data-en="Programming">
 							</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" id="volunteering" href="#" 
-							
-								data-en="Cocurriculars">
+							<a class="nav-link" id="experience" href="#"
+
+								data-en="Experience">
 							</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" id="certifications" href="#" 
-							
-								data-en="Education and Experience">
+							<a class="nav-link" id="volunteering" href="#"
+
+								data-en="Misc">
 							</a>
 						</li>
-					
+
 						<!-- <li class="nav-item">
 							<a class="nav-link" id="experience" href="#" 
 								
@@ -196,7 +222,7 @@
 						</div>
 
 						<div class="col-10">
-							<a href="assets/img/Sumaita_Academic_CV26Jan.pdf" class="link-dark" target="_blank" data-en="CV [Updated Jan/2025]"></a>
+							<a href="assets/img/CV 2026.pdf" class="link-dark" target="_blank" data-en="CV [Updated 2026]"></a>
 						</div> 
 
 					</div>
@@ -330,12 +356,12 @@
 
 							<p class="mt-1"
 								
-							data-en="I hold a BSc degree in Computer Science & Engineering from Jahangirnagar University, Dhaka, Bangladesh. Currently, I am a PhD Candidate at the Department of Computer Science working as a Graduate Research Assistant at the Software Engineering Analytics Lab (SEAL) at Wayne State University in Detroit, Michigan, USA. My research focuses on software engineering, with a particular emphasis on code review, an essential part of modern software development. I also have a strong foundation in algorithms and programming with C/C++, and Java.">
+							data-en="Currently, I am a PhD Candidate at the Department of Computer Science working as a Graduate Research Assistant at the Software Engineering Analytics Lab (SEAL) at Wayne State University in Detroit, Michigan, USA. My research focuses on software engineering, with a particular emphasis on code review. ">
 						</p>
 
 						<p class="mt-1"
 								
-						data-en="Outside of my academic and professional work, I enjoy graphic design, digital art, and creative communication, and I value collaboration and leadership in both creative and technical settings. Participating in a Bangladesh National Television English Debate Show helped nurture my interest in language, creative writing, and supporting others in developing their communication skills. I love making friends and enjoy exploring music and pop culture.">
+						data-en="Outside of my academic and professional work, I enjoy arts and crafts, creative communication, and I value collaboration and leadership in both creative and technical settings. I love making friends and enjoy exploring music and pop culture.">
 					    </p>
 
 						<p class="mt-1"
@@ -345,206 +371,75 @@
 
 							<h4 id="honors-and-awards" class="mt-2" data-es="Premios y Distinciones" data-en="Honors and Awards"></h4>
 
-							<ul class="mt-1">
+							<ul class="mt-1 honors-list">
 
+								<li class="abme-honors-bullet mt-2">
+									1st Runner Up, Power Up Inter-University Online Business Plan Competition 2020, organized by Varendra University, Bangladesh
+									<span class="honor-date">Jan 2021</span>
+								</li>
 
-								
+								<li class="abme-honors-bullet mt-2">
+									Shortlisted Participant, top 100 teams out of 3700+ teams nationwide in ideaTHON Contest 2020, organized by Startup Bangladesh | Innovation, Design &amp; Entrepreneurship Academy (iDEA) | Bangladesh Computer Council | ICT Division
+									<span class="honor-date">Nov 2020</span>
+								</li>
+
+								<li class="abme-honors-bullet mt-2">
+									Champion, BdOSN Dev Mania 2020 Hackathon, organized by BdOSN (Bangladesh Open Source Network)
+									<span class="honor-date">Oct 2020</span>
+								</li>
+
+								<li class="abme-honors-bullet mt-2">
+									Honourable Mention, PrivaShe Hacks’20 Hackathon, organized by PrivaC
+									<span class="honor-date">Jul 2020</span>
+								</li>
+
+								<li class="abme-honors-bullet mt-2">
+									Ranked in the top 30% out of 100+ teams, Ada Lovelace National Girls’ Programming Contest 2022, hosted by University of Asia Pacific, Dhaka, Bangladesh
+									<span class="honor-date">Jul 2022</span>
+								</li>
+
+								<li class="abme-honors-bullet mt-2">
+									Ranked in the top 40% out of 100+ teams, National Girls’ Programming Contest 2021, hosted by Daffodil International University, Dhaka, Bangladesh
+									<span class="honor-date">Nov 2021</span>
+								</li>
+
+								<li class="abme-honors-bullet mt-2">
+									Jahangirnagar University Merit Scholarship, awarded for academic excellence from among 420 students
+									<span class="honor-date">2019 – Present</span>
+								</li>
+
+								<li class="abme-honors-bullet mt-2">
+									Participated in 100+ prestigious competitive programming contests, onsite and online, including IEEE Xtreme 14.0 and the ICPC Dhaka Regional Preliminary Contest 2020
 								</li>
 
 								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="🥈 1st Runner Up, Power Up Inter-University Online Business Plan Competition 2020 organized by Varendra University, Bangladesh"></span></strong> <span></span> 
-						
-									
-									- Jan, 2021
+									Top 36 Finalist for Boot Camp out of 1000+ participants in the National Round, 1st Bangladesh Junior Science Olympiad (BDJSO-National) Camp
+									<span class="honor-date">Aug 2015</span>
 								</li>
 
-								
 								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="Shortlisted Participant, made it to the top 100 teams out of 3700+ teams from all over the country in ideaTHON Contest 2020 organized by Startup Bangladesh | Innovation, Design & Entrepreneurship Academy (iDEA) | Bangladesh Computer Council | ICT Division  ""></span></strong> 
-									-Nov, 2020
-									
-									
-								</li>
-							
-							<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="🥇 Champion, BdOSN Dev Mania 2020, Hackathon Organized by: BdOSN (Bangladesh Open Source Network), October 04 2020"></span></strong> 
-									-Oct, 2020
-									
-									
+									Special Prize Holder, 1st Bangladesh Junior Science Olympiad (BDJSO-National)
+									<span class="honor-date">20 Aug 2015</span>
 								</li>
 
-
 								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="🥉 Honourable Mention, PrivaShe Hacks’20, Hackathon Organized by: PrivaC"></span></strong> 
-									-July, 2020
+									2nd Runner Up, 13th Bangladesh Mathematical Olympiad (BDMO), Dhaka Regional Olympiad
+									<span class="honor-date">16 Jan 2015</span>
 								</li>
 
-		                        <li class="abme-honors-bullet mt-2">
-									<strong><span data-en="🥉 Became one of the top 36 Finalists going to Boot Camp out of 1000+ Participants from the National Round, 1st Bangladesh Junior Science Olympiad (BDJSO-National) Camp"></span></strong> 
-									-Aug, 2015
+								<li class="abme-honors-bullet mt-2">
+									Won prizes, including one best speaker award, two years in a row in Intra-School Debate Competitions organized by Foundation School, Bangladesh
+									<span class="honor-date">2011 – 2012</span>
 								</li>
 
-
 								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="🥉 Special Prize Holder, 1st Bangladesh Junior Science Olympiad (BDJSO-National)"></span></strong> 
-									-20 Aug, 2015
+									Won prizes four years in a row in Intra-School Science Fair Competitions organized by Foundation School, Bangladesh
+									<span class="honor-date">2008 – 2011</span>
 								</li>
 
-						
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="🥉2nd Runner Up, 13th Bangladesh Mathematical Olympiad (BDMO), Dhaka Regional Olympiad"></span></strong> 
-									-16 Jan, 2015
-
-								</li>
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="JU Merit Scholarship: Awarded scholarships for academic excellence from among 420 students from
-										session 2019 to present."></span></strong> 
-						
-								</li>
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="Ranked at top 30% out of 100+ teams at Ada Lovelace National Girls’ Programming Contest 2022,
-										Hosted by: University of Asia Pacific, Dhaka, Bangladesh. July 23, 2022"></span></strong> 
-						
-									
-								</li>
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="Ranked at top 40% out of 100+ teams at National Girls’ Programming Contest 2021, Hosted by:
-										Daffodil International University, Dhaka, Bangladesh. November 26, 2021
-										"></span></strong> 
-						
-									
-								</li>
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="Participated in 100+ Prestigious Competitive Programming Contests (both onsite and online) including
-										IEEE Xtreme 14.0, ICPC Dhaka Regional Preliminary Contest 2020 and so on.
-										"></span></strong> 
-						
-									
-								</li>
-									
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="Won prizes (including one best speaker award) 2 years in a row in Intra-School Debate Competitions
-										organized by Foundation School, Bangladesh from 2011-2012."></span></strong> 
-						
-									
-								</li>
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-en="Won prizes 4 years in a row in Intra-School Science Fair Competitions organized by Foundation
-										School, Bangladesh from 2008-2011."></span></strong> 
-						
-									
-								</li>	
-					
-						
 							</ul>
 
 											
-								<h4 id="hobbiesH4" class="mt-2">Artistry Kaleidoscope</h4>
-								<p class="mt-1"
-								 data-en="Like a kaleidoscope's varied patterns, my art takes on diverse forms."
-						        </p>
-
-								<div class="clickable mt-4 language">
-									<div class="d-none">https://www.behance.net/sumaitashorif</div>
-									<div class="h5">Digital Art 
-									
-									</div>
-
-									<img src="assets/img/digital.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
-									 
-									<div class="blog-info mt-2">
-								
-									</div>
-		
-									<div class="blog-short mt-2" 
-										
-										data-en="Step into my Digital Art Gallery – Crafted using Adobe Illustrator, Adobe Draw, and Adobe Fresco, where imagination meets technology. I've brought to life a collection of vibrant artworks. These pieces blur the lines between traditional artistry and modern tools, resulting in a captivating exploration of digital creativity.">
-				
-										
-									</div>
-									
-									</div>
-
-									<div class="clickable mt-4 language">
-										<div class="d-none">https://dribbble.com/SumaitaB</div>
-										<div class="h5">Logos and Printables Design:
-										
-										</div>
-	
-										<img src="assets/img/logos.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
-										 
-										<div class="blog-info mt-2">
-									
-										</div>
-			
-										<div class="blog-short mt-2" 
-											
-											data-en="From intricately crafted logos that embody distinct identities to delightful printables that add charm to special moments, my work is a canvas of imagination. Each logo captures the essence of its subject, while the printables infuse joy into diverse occasions.">
-					
-											
-										</div>
-										</div>
-
-									<div class="clickable mt-4 language">
-										<div class="d-none">https://www.instagram.com/keep_yourmouthshut/</div>
-										<div class="h5">Traditional Art 
-										
-										</div>
-	
-										<img src="assets/img/trad.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
-										 
-										<div class="blog-info mt-2">
-									
-										</div>
-			
-										<div class="blog-short mt-2" 
-											
-											data-en="Artistry on Paper and Canvas: Watercolors, Acrylics, and Gouache Creations.">
-					
-											
-										</div>
-										</div>
-
-
-										<div class="clickable mt-4 language">
-											<div class="d-none">https://www.instagram.com/keep_yourmouthshut/</div>
-											<div class="h5">Conceptual Art 
-											
-											</div>
-		
-											<img src="assets/img/concept.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
-											 
-											<div class="blog-info mt-2">
-										
-											</div>
-				
-											<div class="blog-short mt-2" 
-												
-												data-en="Exploring Boundless Ideas: A Journey into Conceptual Art.">
-						
-												
-											</div>
-											</div>
-
-											<div class="clickable mt-4 language">
-												<div class="d-none">https://www.instagram.com/keep_yourmouthshut/</div>
-												<div class="h5">Crafts
-												
-												</div>
-			
-												<img src="assets/img/crafts.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
-												 
-												<div class="blog-info mt-2">
-											
-												</div>
-					
-												<div class="blog-short mt-2" 
-													
-													data-en="Sculpting Dreams with Clay and Paper: Crafting Wonders with Polymer, Air-Dry Clay, and Origami.">
-							
-													
-												</div>
-											</div>
 										
 			
 					
@@ -562,30 +457,30 @@
 				<div class="col-md-8 offset-md-1 mb-5" id="publicationsContent">
 					<div class="container">
 						<div class="row mt-2">
-							<h4 class="post-title">Publications and Preprints [<a href="https://scholar.google.com/citations?user=h2VwEOgAAAAJ&hl=en" target="_blank">Google Scholar</a>]</h4>
+							<h4 class="post-title">Selected Publications [<a href="https://scholar.google.com/citations?user=h2VwEOgAAAAJ&hl=en" target="_blank">Google Scholar</a>]</h4>
 							<!-- <h2 class="pub-year-h2">2023</h2> -->
 
 							<div class="pub-block">
 								<div class="abel h10">Amina Khatun, Rafid Mostafiz, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin, Md Abdul Hadi. "Dehazing using Generative Adversarial Network-A Review,"
-			<font color= "magenta"> SN Computer Science, Springer Nature Singapore, </font>January 2025 <i class="far fa-file-pdf"></i> <a href="https://pdf.sciencedirectassets.com/780156/1-s2.0-S2772528624X00059/1-s2.0-S2772528624000281/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC8aCXVzLWVhc3QtMSJGMEQCIAiOOQmwvFUsED%2FaE3z0BrwlZhgfNYKYB49yDTaSdjbBAiAgO7uYFJHIx3Uz63HuFEGsvnWQ0W3pdLXiZ%2BPEBOLC3Cq8BQjo%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIM1AmuZj1QCE6hX8ypKpAFBaim57uqBOtZrRCOYHiEW4O4rS53HbCkS3kTfeTKdgQYqI406WZSth5KzfD5ld%2BhVeeiUMWGPKof3rgpn%2Fx8AE22iS2bleKKefbtbCatWgCOSxFMVUB1Acg%2BfoxMK2lHplVJjhHsOjcmUKF%2BupL%2Ft2obYTH8Pria8Eal%2FRT4IEI%2Fkyv%2Fr8O18hXOZyB3F%2FLUrNUSbJd4yPLQHrocwZMPf84foSKNp%2B9Zo%2FbIYKOQYzPPxAKHUkumnUJIIVsm1UZeo4KbhN1cWDRNRJU4hAu7q2zC5bIkADVvqYUT7mIem2r2dBQhXgcpa4apsQqnGFSx%2FVuOiBu1fZMthwP50l4JnuC9OCRrBsZYUOxk1cHGxATp3Z3uQ8A%2FIjctxBHSjQ0vXXsSZRaxCVGtFsaO1EFgHmXJ5c8kXARlUhnz6uK3kpeV4kcTP24U2XZsgD8jZJV1QIt2fsnaveBuyfx%2FZNhxk7dL%2BkCUSPHrfseLii2q279ZxoWwBekI0PKPIPOyIlsMoFrDMAYuVkBrZNQGte9gZRIv%2FhRaYFLaW%2F8Z%2BzSwAnTNR9AAvuGUE%2FjpSuKJ9q05fIAXBA2GB4Xn1%2FcgundwnOKVk1sghsLGrz34w9fTCe1HCMQP%2FYdqQVxfpzvJnk12wtWDCHm9kbwjiEJNk2ZUti4%2FsA7CZtdYncrG8IHE6DdA6KxWmvVyGA9K%2BbKh9iraWIQnBbSGAn4jMigMIyn2PWueTE8k8srH%2Bcdbn4AX8iYa52NGCfbx7%2FKE9VSxCgY9oZnpYFss8zbfx0F0EBb8AbOO%2FNwJTDOxlPdF1kD%2BW8nq82VKNpSun8%2FsbnXwEienF8Jfu03BiUfekxku%2BfwB7e8ayQmh7foU2Cx%2FYStS0IMwss70ugY6sgHwOU146H%2F6pSPCAv%2F%2BA9hLhpc9dvUWSyv1ddCqvylo1v27koivTHpLL0ixrFtBh%2B1eW%2B5LIQOS%2FwIyyyVyIn4zRz9CUr%2F92vP6YjLeol%2FwpUB8iZJnhUjUM5cXXq0IoJQBDy3BVdlrnfcRakDJBIVA0jCcSjHqGXubEEsLrEdDZBkPJpEza%2BtnThMHOr48XLSyq%2FOfLsOEFODsFOlGHlJXNPTuAbEvI8TAeFDLnUc%2B952N&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241214T065721Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYTC7WXEMZ%2F20241214%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=81aaef00102403c04a6a16bfeb4f1c1a321ab7e78fb05ab6a214479c4ee8fb77&hash=2c59f110c4178d5f89fe630bb277160480fd216b70ce89f97d28a2defd0bb723&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2772528624000281&tid=spdf-9c369877-2019-40a5-b2c3-b3c71131892e&sid=1fd8f2ef8f3a3842e0882800b09eb78848dcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=010b59005402560057&rr=8f1c4c994939bc25&cc=bd" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+			 SN Computer Science, Springer Nature Singapore, January 2025 <i class="far fa-file-pdf"></i> <a href="https://pdf.sciencedirectassets.com/780156/1-s2.0-S2772528624X00059/1-s2.0-S2772528624000281/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC8aCXVzLWVhc3QtMSJGMEQCIAiOOQmwvFUsED%2FaE3z0BrwlZhgfNYKYB49yDTaSdjbBAiAgO7uYFJHIx3Uz63HuFEGsvnWQ0W3pdLXiZ%2BPEBOLC3Cq8BQjo%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIM1AmuZj1QCE6hX8ypKpAFBaim57uqBOtZrRCOYHiEW4O4rS53HbCkS3kTfeTKdgQYqI406WZSth5KzfD5ld%2BhVeeiUMWGPKof3rgpn%2Fx8AE22iS2bleKKefbtbCatWgCOSxFMVUB1Acg%2BfoxMK2lHplVJjhHsOjcmUKF%2BupL%2Ft2obYTH8Pria8Eal%2FRT4IEI%2Fkyv%2Fr8O18hXOZyB3F%2FLUrNUSbJd4yPLQHrocwZMPf84foSKNp%2B9Zo%2FbIYKOQYzPPxAKHUkumnUJIIVsm1UZeo4KbhN1cWDRNRJU4hAu7q2zC5bIkADVvqYUT7mIem2r2dBQhXgcpa4apsQqnGFSx%2FVuOiBu1fZMthwP50l4JnuC9OCRrBsZYUOxk1cHGxATp3Z3uQ8A%2FIjctxBHSjQ0vXXsSZRaxCVGtFsaO1EFgHmXJ5c8kXARlUhnz6uK3kpeV4kcTP24U2XZsgD8jZJV1QIt2fsnaveBuyfx%2FZNhxk7dL%2BkCUSPHrfseLii2q279ZxoWwBekI0PKPIPOyIlsMoFrDMAYuVkBrZNQGte9gZRIv%2FhRaYFLaW%2F8Z%2BzSwAnTNR9AAvuGUE%2FjpSuKJ9q05fIAXBA2GB4Xn1%2FcgundwnOKVk1sghsLGrz34w9fTCe1HCMQP%2FYdqQVxfpzvJnk12wtWDCHm9kbwjiEJNk2ZUti4%2FsA7CZtdYncrG8IHE6DdA6KxWmvVyGA9K%2BbKh9iraWIQnBbSGAn4jMigMIyn2PWueTE8k8srH%2Bcdbn4AX8iYa52NGCfbx7%2FKE9VSxCgY9oZnpYFss8zbfx0F0EBb8AbOO%2FNwJTDOxlPdF1kD%2BW8nq82VKNpSun8%2FsbnXwEienF8Jfu03BiUfekxku%2BfwB7e8ayQmh7foU2Cx%2FYStS0IMwss70ugY6sgHwOU146H%2F6pSPCAv%2F%2BA9hLhpc9dvUWSyv1ddCqvylo1v27koivTHpLL0ixrFtBh%2B1eW%2B5LIQOS%2FwIyyyVyIn4zRz9CUr%2F92vP6YjLeol%2FwpUB8iZJnhUjUM5cXXq0IoJQBDy3BVdlrnfcRakDJBIVA0jCcSjHqGXubEEsLrEdDZBkPJpEza%2BtnThMHOr48XLSyq%2FOfLsOEFODsFOlGHlJXNPTuAbEvI8TAeFDLnUc%2B952N&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241214T065721Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYTC7WXEMZ%2F20241214%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=81aaef00102403c04a6a16bfeb4f1c1a321ab7e78fb05ab6a214479c4ee8fb77&hash=2c59f110c4178d5f89fe630bb277160480fd216b70ce89f97d28a2defd0bb723&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2772528624000281&tid=spdf-9c369877-2019-40a5-b2c3-b3c71131892e&sid=1fd8f2ef8f3a3842e0882800b09eb78848dcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=010b59005402560057&rr=8f1c4c994939bc25&cc=bd" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                       
 							</div><p></p>
 							<div class="pub-block">
 								<div class="abel h10">Kanija Muntarina, Rafid Mostafiz, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin. "Deep Learning-Based Edge Detection for Random Natural Images,"
-			<font color= "magenta"> Neuroscience Informatics, Elsevier, </font>28 November 2024 <i class="far fa-file-pdf"></i> <a href="https://pdf.sciencedirectassets.com/780156/1-s2.0-S2772528624X00059/1-s2.0-S2772528624000281/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC8aCXVzLWVhc3QtMSJGMEQCIAiOOQmwvFUsED%2FaE3z0BrwlZhgfNYKYB49yDTaSdjbBAiAgO7uYFJHIx3Uz63HuFEGsvnWQ0W3pdLXiZ%2BPEBOLC3Cq8BQjo%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIM1AmuZj1QCE6hX8ypKpAFBaim57uqBOtZrRCOYHiEW4O4rS53HbCkS3kTfeTKdgQYqI406WZSth5KzfD5ld%2BhVeeiUMWGPKof3rgpn%2Fx8AE22iS2bleKKefbtbCatWgCOSxFMVUB1Acg%2BfoxMK2lHplVJjhHsOjcmUKF%2BupL%2Ft2obYTH8Pria8Eal%2FRT4IEI%2Fkyv%2Fr8O18hXOZyB3F%2FLUrNUSbJd4yPLQHrocwZMPf84foSKNp%2B9Zo%2FbIYKOQYzPPxAKHUkumnUJIIVsm1UZeo4KbhN1cWDRNRJU4hAu7q2zC5bIkADVvqYUT7mIem2r2dBQhXgcpa4apsQqnGFSx%2FVuOiBu1fZMthwP50l4JnuC9OCRrBsZYUOxk1cHGxATp3Z3uQ8A%2FIjctxBHSjQ0vXXsSZRaxCVGtFsaO1EFgHmXJ5c8kXARlUhnz6uK3kpeV4kcTP24U2XZsgD8jZJV1QIt2fsnaveBuyfx%2FZNhxk7dL%2BkCUSPHrfseLii2q279ZxoWwBekI0PKPIPOyIlsMoFrDMAYuVkBrZNQGte9gZRIv%2FhRaYFLaW%2F8Z%2BzSwAnTNR9AAvuGUE%2FjpSuKJ9q05fIAXBA2GB4Xn1%2FcgundwnOKVk1sghsLGrz34w9fTCe1HCMQP%2FYdqQVxfpzvJnk12wtWDCHm9kbwjiEJNk2ZUti4%2FsA7CZtdYncrG8IHE6DdA6KxWmvVyGA9K%2BbKh9iraWIQnBbSGAn4jMigMIyn2PWueTE8k8srH%2Bcdbn4AX8iYa52NGCfbx7%2FKE9VSxCgY9oZnpYFss8zbfx0F0EBb8AbOO%2FNwJTDOxlPdF1kD%2BW8nq82VKNpSun8%2FsbnXwEienF8Jfu03BiUfekxku%2BfwB7e8ayQmh7foU2Cx%2FYStS0IMwss70ugY6sgHwOU146H%2F6pSPCAv%2F%2BA9hLhpc9dvUWSyv1ddCqvylo1v27koivTHpLL0ixrFtBh%2B1eW%2B5LIQOS%2FwIyyyVyIn4zRz9CUr%2F92vP6YjLeol%2FwpUB8iZJnhUjUM5cXXq0IoJQBDy3BVdlrnfcRakDJBIVA0jCcSjHqGXubEEsLrEdDZBkPJpEza%2BtnThMHOr48XLSyq%2FOfLsOEFODsFOlGHlJXNPTuAbEvI8TAeFDLnUc%2B952N&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241214T065721Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYTC7WXEMZ%2F20241214%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=81aaef00102403c04a6a16bfeb4f1c1a321ab7e78fb05ab6a214479c4ee8fb77&hash=2c59f110c4178d5f89fe630bb277160480fd216b70ce89f97d28a2defd0bb723&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2772528624000281&tid=spdf-9c369877-2019-40a5-b2c3-b3c71131892e&sid=1fd8f2ef8f3a3842e0882800b09eb78848dcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=010b59005402560057&rr=8f1c4c994939bc25&cc=bd" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+			 Neuroscience Informatics, Elsevier, 28 November 2024 <i class="far fa-file-pdf"></i> <a href="https://pdf.sciencedirectassets.com/780156/1-s2.0-S2772528624X00059/1-s2.0-S2772528624000281/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC8aCXVzLWVhc3QtMSJGMEQCIAiOOQmwvFUsED%2FaE3z0BrwlZhgfNYKYB49yDTaSdjbBAiAgO7uYFJHIx3Uz63HuFEGsvnWQ0W3pdLXiZ%2BPEBOLC3Cq8BQjo%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIM1AmuZj1QCE6hX8ypKpAFBaim57uqBOtZrRCOYHiEW4O4rS53HbCkS3kTfeTKdgQYqI406WZSth5KzfD5ld%2BhVeeiUMWGPKof3rgpn%2Fx8AE22iS2bleKKefbtbCatWgCOSxFMVUB1Acg%2BfoxMK2lHplVJjhHsOjcmUKF%2BupL%2Ft2obYTH8Pria8Eal%2FRT4IEI%2Fkyv%2Fr8O18hXOZyB3F%2FLUrNUSbJd4yPLQHrocwZMPf84foSKNp%2B9Zo%2FbIYKOQYzPPxAKHUkumnUJIIVsm1UZeo4KbhN1cWDRNRJU4hAu7q2zC5bIkADVvqYUT7mIem2r2dBQhXgcpa4apsQqnGFSx%2FVuOiBu1fZMthwP50l4JnuC9OCRrBsZYUOxk1cHGxATp3Z3uQ8A%2FIjctxBHSjQ0vXXsSZRaxCVGtFsaO1EFgHmXJ5c8kXARlUhnz6uK3kpeV4kcTP24U2XZsgD8jZJV1QIt2fsnaveBuyfx%2FZNhxk7dL%2BkCUSPHrfseLii2q279ZxoWwBekI0PKPIPOyIlsMoFrDMAYuVkBrZNQGte9gZRIv%2FhRaYFLaW%2F8Z%2BzSwAnTNR9AAvuGUE%2FjpSuKJ9q05fIAXBA2GB4Xn1%2FcgundwnOKVk1sghsLGrz34w9fTCe1HCMQP%2FYdqQVxfpzvJnk12wtWDCHm9kbwjiEJNk2ZUti4%2FsA7CZtdYncrG8IHE6DdA6KxWmvVyGA9K%2BbKh9iraWIQnBbSGAn4jMigMIyn2PWueTE8k8srH%2Bcdbn4AX8iYa52NGCfbx7%2FKE9VSxCgY9oZnpYFss8zbfx0F0EBb8AbOO%2FNwJTDOxlPdF1kD%2BW8nq82VKNpSun8%2FsbnXwEienF8Jfu03BiUfekxku%2BfwB7e8ayQmh7foU2Cx%2FYStS0IMwss70ugY6sgHwOU146H%2F6pSPCAv%2F%2BA9hLhpc9dvUWSyv1ddCqvylo1v27koivTHpLL0ixrFtBh%2B1eW%2B5LIQOS%2FwIyyyVyIn4zRz9CUr%2F92vP6YjLeol%2FwpUB8iZJnhUjUM5cXXq0IoJQBDy3BVdlrnfcRakDJBIVA0jCcSjHqGXubEEsLrEdDZBkPJpEza%2BtnThMHOr48XLSyq%2FOfLsOEFODsFOlGHlJXNPTuAbEvI8TAeFDLnUc%2B952N&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241214T065721Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYTC7WXEMZ%2F20241214%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=81aaef00102403c04a6a16bfeb4f1c1a321ab7e78fb05ab6a214479c4ee8fb77&hash=2c59f110c4178d5f89fe630bb277160480fd216b70ce89f97d28a2defd0bb723&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2772528624000281&tid=spdf-9c369877-2019-40a5-b2c3-b3c71131892e&sid=1fd8f2ef8f3a3842e0882800b09eb78848dcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=010b59005402560057&rr=8f1c4c994939bc25&cc=bd" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                       
 							</div><p></p>
 
 							<div class="pub-block">
 								<div class="abel h10"><b>Sumaita Binte Shorif</b>, Sadia Afrin, Anup Majumder, Mohammad Shorif Uddin. "Computer Vision-Based Algorithms on Zebra Crossing Navigation,"
-									Proc. of International Joint Conference on Advances in Computational Intelligence (IJCACI 2021), 23-24 October 2021, New Delhi, India, <font color= "magenta"> (Algorithms for Intelligent Systems, Springer), </font>pp. 319-328 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-19-0332-8_23" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+									Proc. of International Joint Conference on Advances in Computational Intelligence (IJCACI 2021), 23-24 October 2021, New Delhi, India,  (Algorithms for Intelligent Systems, Springer), pp. 319-328 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-19-0332-8_23" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                     
 							</div><p></p>
 
 
 							<div class="pub-block">
 								<div class="abel h10">Kanija Muntarina, Rafid Mostafiz, Fahmida Khanom, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin, "MultiResEdge: A Deep Learning-Based Edge Detection Approach,"
-									<font color= "magenta">Intelligent Systems with Applications (Elsevier)</font> Vol. 20, November 2023 <b><font color= "red">(WoS, Scopus, Q1)</font></b> <i class="far fa-file-pdf"></i> <a href="https://doi.org/10.1016/j.iswa.2023.200274" target="_blank" class="link-dark "><b>Paper</b></a> </div>
+									Intelligent Systems with Applications (Elsevier) Vol. 20, November 2023 <b>(WoS, Scopus, Q1)</b> <i class="far fa-file-pdf"></i> <a href="https://doi.org/10.1016/j.iswa.2023.200274" target="_blank" class="link-dark "><b>Paper</b></a> </div>
 
 								
 
@@ -593,7 +488,7 @@
 
 							<div class="pub-block">
 								<div class="abel h10">Mahbuba Begum, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin, Jannatul Ferdush, Tony Jan, Alistair Barros and Md Whaiduzzaman, "Image Watermarking Using Discrete Wavelet Transform and Singular Value Decomposition for Enhanced Imperceptibility and Robustness,"
-									<font color= "magenta">Algorthms, MDPI, </font> 12 Jan 2024, <i class="far fa-file-pdf"></i> <a href="https://www.mdpi.com/1999-4893/17/1/32" target="_blank" class="link-dark "><b>Paper</b></a> </div>
+									Algorthms, MDPI,  12 Jan 2024, <i class="far fa-file-pdf"></i> <a href="https://www.mdpi.com/1999-4893/17/1/32" target="_blank" class="link-dark "><b>Paper</b></a> </div>
 
 							
 
@@ -609,20 +504,20 @@
 							
 							<div class="pub-block">
 								<div class="abel h10">Nusrat Sultana, <b>Sumaita Binte Shorif</b>, Morium Akter, Mohammad Shorif Uddin. "A Dataset for Successful Recognition of Cucumber Diseases,"
-									<font color= "magenta">Data in Brief (Elsevier), </font>vol. 49, August 2023 <b><font color= "red">(WoS, Scopus, Q2)</font></b> <i class="far fa-file-pdf"></i> <a href="https://www.sciencedirect.com/science/article/pii/S2352340923004389" target="_blank" class="link-dark "><b>Paper</b></a> </div>
+									Data in Brief (Elsevier), vol. 49, August 2023 <b>(WoS, Scopus, Q2)</b> <i class="far fa-file-pdf"></i> <a href="https://www.sciencedirect.com/science/article/pii/S2352340923004389" target="_blank" class="link-dark "><b>Paper</b></a> </div>
 							</div><p></p>
 
 							<div class="pub-block">
-								<div class="abel h10">Kanija Muntarina, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin. "Notes on Edge Detection Approaches," <font color= "magenta">Evolving Systems (Springer)</font>, March 2021, 
-									<b><font color= "red"> (WoS, Scopus, Q2)</font></b> <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/article/10.1007/s12530-021-09371-8" target="_blank" class="link-dark "><b>Paper</b></a> </div>
+								<div class="abel h10">Kanija Muntarina, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin. "Notes on Edge Detection Approaches," Evolving Systems (Springer), March 2021, 
+									<b> (WoS, Scopus, Q2)</b> <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/article/10.1007/s12530-021-09371-8" target="_blank" class="link-dark "><b>Paper</b></a> </div>
 
 							
 
 							</div><p></p>
 							
 							<div class="pub-block">
-								<div class="abel h10">Md Ariful Hassan, Md Sydul Islam, Md Mehedi Hasan, <b>Sumaita Binte Shorif</b>, Md Tarek Habib, Mohammad Shorif Uddin. "Medicinal Plant Recognition from Leaf Images using Deep Learning," <font color= "magenta">Computer Vision and Machine Learning in Agriculture, Volume 2, Springer Singapore
-									</font>, 2022  <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-16-9991-7_9" target="_blank" class="link-dark "><b>Paper</b></a> </div>
+								<div class="abel h10">Md Ariful Hassan, Md Sydul Islam, Md Mehedi Hasan, <b>Sumaita Binte Shorif</b>, Md Tarek Habib, Mohammad Shorif Uddin. "Medicinal Plant Recognition from Leaf Images using Deep Learning," Computer Vision and Machine Learning in Agriculture, Volume 2, Springer Singapore
+									, 2022  <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-16-9991-7_9" target="_blank" class="link-dark "><b>Paper</b></a> </div>
 									
 						</div><p></p>
 
@@ -631,7 +526,7 @@
 							<div class="pub-block">
 								<div class="abel h10">Rabeya Basri, Fahmida Islam, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin. "Robots and drones in agriculture—a survey,"
 									
-									<font color= "magenta">Computer vision and machine learning in agriculture, Springer Singapore</font>, 2021 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-33-6424-0_2"
+									Computer vision and machine learning in agriculture, Springer Singapore, 2021 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-33-6424-0_2"
 														  
 														  target="_blank" class="link-dark"><b>Paper</b></a> </div>
 							                       
@@ -640,57 +535,37 @@
 
 							<div class="pub-block">
 								<div class="abel h10">Mohammad Shorif Uddin, <b>Sumaita Binte Shorif</b>, Aditi Sarker. "Role-Framework of Artificial Intelligence in Combating the COVID-19 Pandemic,"
-			<font color= "magenta"> Vision, Sensing and Analytics: Integrative Approaches, (Springer), </font>pp. 357-370, 2021 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-3-030-75490-7_13" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+			 Vision, Sensing and Analytics: Integrative Approaches, (Springer), pp. 357-370, 2021 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-3-030-75490-7_13" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                       
 							</div><p></p>
 
-							<div class="pub-block">
+							<!-- <div class="pub-block">
 								<div class="abel h10"><b>Sumaita Binte Shorif</b>, Sadia Afrin, Anup Majumder, Mohammad Shorif Uddin. "Computer Vision-Based Algorithms on Zebra Crossing Navigation,"
-									Proc. of International Joint Conference on Advances in Computational Intelligence (IJCACI 2021), 23-24 October 2021, New Delhi, India, <font color= "magenta"> (Algorithms for Intelligent Systems, Springer), </font>pp. 319-328 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-19-0332-8_23" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+									Proc. of International Joint Conference on Advances in Computational Intelligence (IJCACI 2021), 23-24 October 2021, New Delhi, India,  (Algorithms for Intelligent Systems, Springer), pp. 319-328 <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-19-0332-8_23" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                     
-							</div><p></p>
+							</div><p></p> -->
 
 							<div class="pub-block">
 								<div class="abel h10">Md Tarek Habib, Md Ariful Islam Arif, <b>Sumaita Binte Shorif</b>, Mohammad Shorif Uddin, Farruk Ahmed. "Machine Vision-Based Fruit and Vegetable Disease Recognition: A Review,"
-			<font color= "magenta">Computer Vision and Machine Learning in Agriculture, Springer Singapore</font>, March 2021, <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-33-6424-0_10" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+			Computer Vision and Machine Learning in Agriculture, Springer Singapore, March 2021, <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-33-6424-0_10" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                        
 							</div><p></p>
 
 							<div class="pub-block">
 								<div class="abel h10">Md Zahid Hasan, Nahid Zeba, <b>Sumaita Binte Shorif</b>, Morium Akter. "Deep Learning-Based Essential Paddy Pests' Filtration Technique for Economic Damage Management,"
-			<font color= "magenta"> Computer Vision and Machine Learning in Agriculture, Springer Singapore, </font>March 2021, <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-33-6424-0_4" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+			 Computer Vision and Machine Learning in Agriculture, Springer Singapore, March 2021, <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-33-6424-0_4" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                    
 							</div><p></p>
 
 							<div class="pub-block">
 								<div class="abel h10">Morium Akter, Jannatul Ferdous, Mahmuda Najnin Eva, <b>Sumaita Binte Shorif</b>, Sk Fahmida Islam, Mohammad Shorif Uddin. "Vehicle Detection and Its Speed Measurement,"
-			<font color= "magenta"> ICAEM 2019, Springer Singapore </font><i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-15-8820-4_9" target="_blank" class="link-dark"><b>Paper</b></a> </div>
+			 ICAEM 2019, Springer Singapore <i class="far fa-file-pdf"></i> <a href="https://link.springer.com/chapter/10.1007/978-981-15-8820-4_9" target="_blank" class="link-dark"><b>Paper</b></a> </div>
 								                      
 							</div><p></p>
 							
 							
 						</div>
 
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://www.adscientificindex.com/scientist/sumaita-binte-shorif/4949547</div>
-							<div class="h5">AD SCientific Index Ranking</div>
-							<img src="assets/img/Adindex2024Jan.JPG" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
-							
-							<div class="blog-info mt-2">
-						
-							</div>
-
-							<div class="blog-short mt-2"
-								
-								data-en="- January 12, 2024 issue">
-							</div>
-
-							<div class="blog-tags mt-1">
-								
-								
-								
-							</div>
-						</div>
 
 					</div>
 				</div>
@@ -699,8 +574,7 @@
 				<div class="col-md-8 offset-md-1" id="projectsContent">
 					<div class="container">
 
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://devpost.com/software/recyclobd</div>
+						<div class="project-card mt-4 language">
 							<div class="h5">RecycloBD: One Man's Trash is Another Man's Treasure.
 							
 							</div>
@@ -716,29 +590,17 @@
 
 							<div class="blog-short mt-2" 
 								
-								data-en=" Textile, Plastic, Paper, Electronics and Garment Industry play a predominant role at enhancing the GDP 
-								of Bangladesh. However, textile, plastic, paper waste and scrap recycling & management is something 
-								that's not very often talked about but is definitely causing a serious setback in our combined and day-to-day lives. This scrap and waste material issue have managed to turn into a billion-dollar problem at the 
-								moment and if this problem could be tackled properly, it would not only create new employment 
-								opportunities, giving rise to small independently owned businesses but will also give rise to the overall 
-								well-being of the state as well as creating a major positive impact on the all-embracing exacerbating 
-								climate state of our country. To tackle this billion-dollar issue, introducing- RecycloBD, an Android Mobile App that Facilitates turning Trash into Treasure. In all seriousness, the aim of this app is to ensure proper waste recycling and management on 
-								both personal and industrial level.">
+								data-en="RecycloBD is an Android application that promotes effective personal and industrial waste recycling by connecting individuals and businesses with recycling opportunities. It aims to reduce textile, plastic, paper, electronic, and garment waste, create employment opportunities, support small businesses, and contribute to a cleaner, more sustainable environment.">
 		
 								
 							</div>
 							<img src="assets/img/Capture.PNG" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
 							
 
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#Androidstudio</span> <span class="tag t-sky">#MobileApp</span> <span class="tag t-sky">#Android
-								
-								</span> <span class="tag t-sky">#Java</span> <span class="tag t-sky">#Firebase</span>
-							</div>
+							<a href="https://devpost.com/software/recyclobd" target="_blank" rel="noopener" class="project-link">Project Link</a>
 						</div>
 
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://github.com/SumaitaB/ReCovid</div>
+						<div class="project-card mt-4 language">
 		
 							<div class="h5">ReCovid- Let's Recover from Covid-19</div>
 							
@@ -754,37 +616,15 @@
 
 							<div class="blog-short mt-2" 
 								
-								data-en="Covid-19 in the form of a pandemic has managed to create impediments in our lives 
-								since day 01. The pandemic has created a stigmatized situation in the country and so, 
-								whenever someone is found to be tested positive for the virus, most people don’t 
-								bother helping or caring at all. To solve this major problem, introducing ReCovid, a mobile app that aims at making 
-								personal and community life easier by creating a safe platform not just for patients but 
-								also doctors, volunteers and people who recovered from Covid-19. 
-								ReCovid is an app that provides medical advice, emergency contacts, mental health 
-								support, helps you match with a plasma donor, go for food subscriptions all under one 
-								app and aids your recovery positively while creating a safe platform by creating 
-								bridges among patients, doctors, volunteers and the people who have recovered 
-								successfully from Covid-19.
-								The app works by turning those who recovered from Covid-19 into heroes by providing 
-								them a platform to make a change, connecting patients to doctors for consultation, 
-								offering secure plasma donations, providing a platform for Covid-19 counselling from 
-								those who will understand the emotional toll that the disease takes on someone having 
-								gone through it and, creating a food subscription process through which people can 
-								pay to get home-cooked, nutritious meals and groceries from people who are looking 
-								forward to helping out by finding an opportunity to make some money.">
+								data-en="ReCovid is a mobile application designed to support communities during the COVID-19 pandemic by connecting patients, doctors, volunteers, and recovered individuals on a single platform. It offers medical guidance, emergency contacts, secure plasma donation, teleconsultation, COVID-19 counseling, and food delivery services. By empowering recovered patients to support others, ReCovid fosters community collaboration and makes healthcare assistance more accessible during the pandemic.">
 							</div>
 							<img src="assets/img/Sumaita_hon.PNG" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
 							
 
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#Hackathon
-								</span> <span class="tag t-sky">#PrivaSheHacks2020</span> <span class="tag t-sky">#AndroiStudio
-								</span>
-							</div>
+							<a href="https://github.com/SumaitaB/ReCovid" target="_blank" rel="noopener" class="project-link">Project Link</a>
 						</div>
 
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://github.com/SumaitaB/Exam-Bill-Management-System</div>
+						<div class="project-card mt-4 language">
 							<div class="h5">Exam Bill Management System</div>
 							<img src="assets/img/EBMS.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
 							
@@ -794,33 +634,13 @@
 
 							<div class="blog-short mt-2"
 								
-								data-en="The project illustrates the development of an exam bill management system
-								which is a crucial process in any educational institution. It enables the 
-								faculty and educators to keep an organized track of all invoice related 
-								activities taking place within exam committees and keep a tab on the overall 
-								expenses. However, examination billing in a university is a tedious task. A 
-								strategically chosen billing system can automate the exam committee’s 
-								back-office tasks and reduce the plethora of unending tedious hard-work 
-								and the number of hours it takes to create and generate the bill. In fact, most 
-								exam billing procedures still process most of the invoices manually or 
-								mainly manually. Manual processing requires a lot of human involvement 
-								and multiple touchpoints and tends to be quite erroneous. So, a billing and 
-								invoicing platform with modern billing management and up-to-date 
-								features can help meet today’s billing and accounting requirements while 
-								keeping the whole procedure extremely organized. This automated solution 
-								is especially helpful for universities and departments with a large and 
-								diverse student base with a wide range of features, maneuver and assistance.">
+								data-en="Exam Bill Management System is a web-based solution that automates the preparation and management of examination bills for educational institutions. It streamlines billing and invoicing, reduces manual effort and errors, and helps universities efficiently manage exam committee finances through a centralized and organized platform.">
 							</div>
 
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#WebDev
-								</span>  <span class="tag t-sky">#EBMS</span> <span class="tag t-sky">#Django</span>
-								
-							</div>
+							<a href="https://github.com/SumaitaB/Exam-Bill-Management-System" target="_blank" rel="noopener" class="project-link">Project Link</a>
 						</div>
 
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://github.com/JU-High-Fives/Dhar-Hobe</div>
+						<div class="project-card mt-4 language">
 		
 							<div class="h5">Dhar Hobe - A Bangladeshi Product Renting System</div>
 							<img src="assets/img/DharHobe.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
@@ -838,15 +658,10 @@
 					
 							
 
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#Python
-								</span> <span class="tag t-sky">#Django</span> <span class="tag t-sky">#WebApp
-								</span>
-							</div>
+							<a href="https://github.com/JU-High-Fives/Dhar-Hobe" target="_blank" rel="noopener" class="project-link">Project Link</a>
 						</div>
 
-<div class="clickable mt-4 language">
-	<div class="d-none">https://github.com/SumaitaB/IlluminateTech-Smart-Classroom-Lighting-Solutions</div>
+<div class="project-card mt-4 language">
 	<div class="h5">IlluminateTech: Smart Classroom Lighting Solutions</div>
 	<img src="assets/img/tech.JPG" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
 	
@@ -856,20 +671,29 @@
 
 	<div class="blog-short mt-2"
 		
-		data-en="IlluminateTech: Smart Classroom Lighting Solutions, presents a comprehensive project aimed at revolutionizing the traditional lighting systems within educational institutions. The project integrates cutting-edge hardware components such as Arduino Uno, HC-SR501 PIR Motion Sensor, LDR, NodeMCU ESP8266 Development Board, and a range of supporting elements to create an automated lighting ecosystem. A prototype, ingeniously fashioned from cardboard, manifests the envisioned transformation within the confines of the Computer Science and Engineering department at Jahangirnagar University. Room 101 embodies motion sensitivity, activating lights upon detection of movement, while Room 102 exemplifies remote accessibility, enabling users to manipulate lighting via smartphones or computers through an IoT cloud platform. The streetlights epitomize environmental consciousness, seamlessly transitioning between on and off states based on ambient light levels.">
+		data-en="IlluminateTech is an IoT-based smart classroom lighting system that automates lighting using motion and ambient light sensors. Built with Arduino Uno, NodeMCU ESP8266, PIR, and LDR sensors, it enables energy-efficient lighting control and remote monitoring through a cloud platform.">
 	</div>
 
-	<div class="blog-tags mt-1">
-		<span class="tag t-sky">#ARDUINO
-		</span>  <span class="tag t-sky">#NODEMCU</span> <span class="tag t-sky">#IoT</span>
-		
-	</div>
+	<a href="https://github.com/SumaitaB/IlluminateTech-Smart-Classroom-Lighting-Solutions" target="_blank" rel="noopener" class="project-link">Project Link</a>
 </div>
 
+<div class="project-card mt-4 language">
+	<div class="h5">Brain Stroke Prediction uisng Machine Learning Algorithms</div>
+	<img src="assets/img/Brain.JPG" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
+	
+	<div class="blog-info mt-2">
 
+	</div>
+
+	<div class="blog-short mt-2"
 		
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://github.com/SumaitaB/Arduino-IoT-based-Fire-Alert-System</div>
+		data-en="Used different machine learning algorithms like Logistic Regression, Random Forest, XGBoost to accurately predict brain stroke. Data Preprocessing was done using SMOTE. 97% accuracy was obtained using random forest, 96% using XGBoost and 77% using Logistic Regression.">
+	</div>
+
+	<a href="https://github.com/SumaitaB/Brain-Stroke-Prediction-using-Machine-Learning" target="_blank" rel="noopener" class="project-link">Project Link</a>
+</div>
+		
+						<div class="project-card mt-4 language">
 		
 							<div class="h5">IoT Based Fire Department Alert System</div>
 							<img src="assets/img/Arduino.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita's Profile picture">
@@ -882,18 +706,12 @@
 
 							<div class="blog-short mt-2" 
 								
-								data-en="Fires are one of the most widespread cause of deaths by accident. Instant alerting to the fire department is necessary to ensure immediate action. Every minute can save many lives in such situations. So here we propose an IoT based automatic fire department alerting system that instantly and automatically alerts the fire department and informs about the situation so that immediate action can be taken. The system efficiently detects fires and alert fire department over IOT. We use an Arduino Uno in order to check if a sensor is triggered.
-								The Internet of Things (IoT) is essentially a network of 'things' through which with the help of sensors, electronics, software and networking, physical things can exchange data. No human intervention is needed by these systems. We can send LIVE data such as temperature, smoke value detected by a specific device to the Fire Department in this Arduino fire alarm system with temperature and smoke sensor using the IOT project. Two sensors, namely, temperature and smoke sensors, are used by the IOT Based Fire Alerting System. There is an ADC converter that converts the analog signals received to digital at the end of the sensor and then transmits them to the Arduino microcontroller. When the temperature and the smoke exceed a threshold value, the micro-controller is programmed to turn on the buzzer.
-								">
+								data-en="IoT-Based Fire Alert System is a smart fire detection and emergency alert system built with Arduino Uno, temperature and smoke sensors. It detects fire hazards in real time, automatically triggers alarms, and sends alerts to the fire department over the Internet, enabling faster emergency response with minimal human intervention.">
 							</div>
 					
 							
 
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#Arduino
-								</span> <span class="tag t-sky">#PrivaSheHacks2020</span> <span class="tag t-sky">#IoT
-								</span>
-							</div>
+							<a href="https://github.com/SumaitaB/Arduino-IoT-based-Fire-Alert-System" target="_blank" rel="noopener" class="project-link">Project Link</a>
 						</div>
 
 					</div>
@@ -917,14 +735,14 @@
 					 <hr>
 					  <h4>Profile Links:</h4> 
 					  <p align="center">
-						<a href="https://www.beecrowd.com.br/judge/en/profile/311798" target="blank"><img align="center" src="assets/img/URI.png" height="70" width="70" /></a>
+						<a href="https://judge.beecrowd.com/en/profile/311798" target="blank"><img align="center" src="assets/img/URI.png" height="70" width="70" /></a>
 						<a href="https://uhunt.onlinejudge.org/id/1037195" target="blank"><img align="center" src="assets/img/uva.png" height="70" width="70" /></a>    
 						<a href="https://www.hackerrank.com/jucse28_357" target="blank"><img align="center" src="assets/img/hackerrank.png" height="70" width="70" /></a> 
 						<a href="https://codeforces.com/profile/SisDontJudge" target="blank"><img align="center" src="assets/img/codeforces.webp" height="70" width="70" /></a> 	
 						<a href="https://atcoder.jp/users/codeparadigm" target="blank"><img align="center" src="assets/img/atcoder.png" height="70" width="70" /></a> 	
 						<a href="https://vjudge.net/user/sumaita_28_357" target="blank"><img align="center" src="assets/img/vjudge.jpg" height="70" width="70" /></a>
 						<a href="https://open.kattis.com/users/codeparadigm" target="blank"><img align="center" src="assets/img/kattislogo.png" height="70" width="70" /></a>
-						<a href="https://www.stopstalk.com/user/profile/SumaitaB" target="blank"><img align="center" src="assets/img/stopstalk2.png" height="70" width="70" /></a> 	
+						<!-- <a href="https://www.stopstalk.com/user/profile/SumaitaB" target="blank"><img align="center" src="assets/img/stopstalk2.png" height="70" width="70" /></a> 	 -->
 						
 						<hr><br>
 						<h4> Notable Contests: </h4>
@@ -940,7 +758,7 @@
 							 
 							   
 										
-										<i class="fas fa-star"></i> <a href="https://toph.co/c/alngpc-2022/standings" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://toph.co/c/alngpc-2022/standings" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -954,7 +772,7 @@
 								 Team: JU_SisDontEvenJudge</br>
 								
 											
-											<i class="fas fa-star"></i> <a href="https://toph.co/c/ngpc-2021/standings" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+											<i class="fas fa-star"></i> <a href="https://toph.co/c/ngpc-2021/standings" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 		
 										<div class="d-none">
 										  }</div>
@@ -968,7 +786,7 @@
  Team: JU_plusUltra </br>
 
 
-											<i class="fas fa-star"></i> <a href="https://toph.co/c/ada-lovelace-national-girls-2021/standings" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+											<i class="fas fa-star"></i> <a href="https://toph.co/c/ada-lovelace-national-girls-2021/standings" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 		
 										<div class="d-none">
 										  }</div>
@@ -978,7 +796,7 @@
 									<div class="abel h10">IEEE Xtreme 14.0 (24 Hour Competitive Programming Competition); Jan, 2021.
 									</br>Team: Sisdontjudge </br>
 										
-										<i class="fas fa-star"></i> <a href="https://ieeextreme.org/ieeextreme-14-0-ranking/" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://ieeextreme.org/ieeextreme-14-0-ranking/" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1002,7 +820,7 @@
 								</br>
 
 										
-										<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/362000#rank" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/362000#rank" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1017,7 +835,7 @@
 										
 										<i class="fas fa-star"></i> <a href="https://toph.co/c/mbstu-inter-department-2020/standings
 
-										" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1028,7 +846,7 @@
 									Team: sumaita_28_357
 								   </br>
 										
-										<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/361974#rank" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/361974#rank" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1040,7 +858,7 @@
 								   
 								   </br>
 										
-										<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/358254#rank" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/358254#rank" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1053,7 +871,7 @@
 
 							   
 										
-										<i class="fas fa-star"></i> <a href="https://toph.co/c/ngpc-2019/standings" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://toph.co/c/ngpc-2019/standings" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1073,7 +891,7 @@
 								<div class="pub-block">
 									<div class="abel h10">Samsung R&D Institute Tech Academy Batch 4 Online exam (SRBD191110), Nov 10 2019
 									</br>Team: jucse28_357</br>
-										<i class="fas fa-star"></i> <a href="https://www.hackerrank.com/contests/srbd191110/leaderboard" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://www.hackerrank.com/contests/srbd191110/leaderboard" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1086,7 +904,7 @@
 									Team: JU_Challengingtimes
 								   </br>
 										
-										<i class="fas fa-star"></i> <a href="https://toph.co/c/ngpc-2019-preliminary/standings" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://toph.co/c/ngpc-2019-preliminary/standings" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1100,7 +918,7 @@
 								   </br>
 							   
 										
-										<i class="fas fa-star"></i> <a href="https://toph.co/c/iugpc-s2/standings" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+										<i class="fas fa-star"></i> <a href="https://toph.co/c/iugpc-s2/standings" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 	
 									<div class="d-none">
 									  }</div>
@@ -1117,48 +935,10 @@
 	
 								</div><p></p>
 
-								<div class="pub-block">
-									<div class="abel h10">Cub Hunting Programming Contest 2019 – 5th May 2019, Jahangirnagar University
-										Contest platform: Toph.co
-									</br>Ranked 52 out of 83 teams,
-									Team: Sumaita Binte Shorif
-								   
-								   </br>
-										
-										<i class="fas fa-star"></i> <a href="https://toph.co/c/cub-hunting-programming-contest-2019/standings" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
-	
-									<div class="d-none">
-									  }</div>
-	
-								</div><p></p>
 								
-									<div class="pub-block">
-										<div class="abel h10">Cub Hunting Programming Contest (vPreliminary.0) – 28th April 2019
-											Contest platform: Hackerrank
-										</br>Ranked 52 out of 156 teams,
-										Team: Sumaita Binte Shorif
-									   </br>
-											<i class="fas fa-star"></i> <a href="https://www.hackerrank.com/contests/cub-hunting-0/leaderboard" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
-		
-										<div class="d-none">
-										  }</div>
-		
-									</div><p></p>
 							
 								
 											
-									<div class="pub-block">
-													<div class="abel h10">Junior Training Contest 1 – 27th April 2019
-														Contest platform: Hackerrank
-													</br>Ranked 01 out of 49 teams,
-													Team: jucse28_357
-													</br>
-														<i class="fas fa-star"></i> <a href="https://www.hackerrank.com/contests/junior-training-contest-1/leaderboard" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
-					
-													<div class="d-none">
-													  }</div>
-					
-												</div><p></p>
 
 												
 
@@ -1167,7 +947,7 @@
 													</br>Ranked 2 out of 6 teams,
 													Team: sumaita_28_257
 												   </br>
-														<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/301178#rank" target="_blank" class="link-dark "><font color= "magenta">Standings</font></a></span></div>
+														<i class="fas fa-star"></i> <a href="https://vjudge.net/contest/301178#rank" target="_blank" class="link-dark "><span class="entry-link">Standings</span></a></span></div>
 					
 													<div class="d-none">
 													  }</div>
@@ -1191,7 +971,7 @@
 												<div class="pub-block">
 													<div class="abel h10">Alpha Ambassador at Microsoft Student Learn Ambassadors
 														</div>
-														<p><font color = "orange">April 2021 - July 2022</font></p>
+														<p><span class="entry-date">April 2021 - July 2022</span></p>
 					
 													<div class="d-none">
 													  }</div>
@@ -1202,27 +982,27 @@
 												<div class="pub-block">
 													<div class="abel h10">Campus Ambassador, Bangladesh 2021 at Youth Opportunities 
 														</div>
-														<p><font color = "orange">Jan 2021 - Dec 2021</font></p>
+														<p><span class="entry-date">Jan 2021 - Dec 2021</span></p>
 					
 													<div class="d-none">
 													  }</div>
 					
 												</div><p></p>
 
-												<div class="pub-block">
+												<!-- <div class="pub-block">
 													<div class="abel h10">IEEE Student Member Bangladesh Section
 														</div>
-														<p><font color = "orange">Member #96794082</font></p>
+														<p><span class="entry-date">Member #96794082</span></p>
 					
 													<div class="d-none">
 													  }</div>
 					
-												</div><p></p>
+												</div><p></p> -->
 
 												<div class="pub-block">
 													<div class="abel h10">Bangladesh Ambassador for Microfest++ organized by Microsoft Student Partners Pakistan held on 29-31 May 2020
 														</div>
-														<p><font color = "orange">Ambassador code: MS-1154</font></p>
+														<p><span class="entry-date">Ambassador code: MS-1154</span></p>
 					
 													<div class="d-none">
 													  }</div>
@@ -1233,7 +1013,7 @@
 												<div class="pub-block">
 													<div class="abel h10">Management Team Member and Medium subgroup lead at Voice of Code by Microsoft Student Partners
 														</div>
-														<p><font color = "orange">May 2020- June 2021</font></p>
+														<p><span class="entry-date">May 2020- June 2021</span></p>
 					
 													<div class="d-none">
 													  }</div>
@@ -1245,14 +1025,14 @@
 													<div class="abel h10">Creative Development Secretary, Jahangirnagar University Computer Club
 														</div>
 														Directed event operations, media engagements of the organization.
-														<p><font color = "orange">Member ID: 48010357</font></p>
+														<p><span class="entry-date">Member ID: 48010357</span></p>
 					
 													<div class="d-none">
 													  }</div>
 					
 												</div><p></p>
 
-												<div class="pub-block">
+												<!-- <div class="pub-block">
 													<div class="abel h10">Former Writer at Writers Club at Voice of Code by Microsoft Student Partners
 														</div>
 														
@@ -1260,17 +1040,17 @@
 													<div class="d-none">
 													  }</div>
 					
-												</div><p></p>
+												</div><p></p> -->
 												<div class="pub-block">
 													<div class="abel h10">Participant, Workshop on Debate and Presentation by JUDO (Jahangirnagar University Debate Organization)
 														</div>
-														<p><font color = "orange">6 March 2019</font></p>
+														<p><span class="entry-date">6 March 2019</span></p>
 					
 													<div class="d-none">
 													  }</div>
 					
 												</div><p></p>
-												<div class="pub-block">
+												<!-- <div class="pub-block">
 													<div class="abel h10">Member, Jahangirnagar University Science Club (JUSC)
 														</div>
 														
@@ -1290,14 +1070,14 @@
 													<div class="d-none">
 													  }</div>
 					
-												</div><p></p>
+												</div><p></p> -->
 											</article>
 											<h3>Media Participations</h3>
 											
 												<div class="pub-block">
-													<div class="abel h10">Article published- <a href="http://www.eindependentbd.com/arc/magazine/2014-10-02#page/11" target="_blank" class="link-dark "><font color= "magenta">“It’s All Fun and Nails to Get Creative”</font></a></span>on the Lifestyle section of “The Independent” daily Newspaper
+													<div class="abel h10">Article published- <a href="http://www.eindependentbd.com/arc/magazine/2014-10-02#page/11" target="_blank" class="link-dark "><span class="entry-link">“It’s All Fun and Nails to Get Creative”</span></a></span>on the Lifestyle section of “The Independent” daily Newspaper
 														
-														<p><font color = "orange">Thursday, Oct 2 2014</font></p></div>
+														<p><span class="entry-date">Thursday, Oct 2 2014</span></p></div>
 					
 													<div class="d-none">
 													  }</div>
@@ -1308,7 +1088,7 @@
 												<div class="pub-block">
 													<div class="abel h10">English Parliamentary Debate Show Third Speaker from the Government Side on Bangladesh National Television (BTV)
 														</div>
-														<p><font color = "orange">TV program no. 3412/7, 28 Sept 2016.</font></p>
+														<p><span class="entry-date">TV program no. 3412/7, 28 Sept 2016.</span></p>
 					
 													<div class="d-none">
 													  }</div>
@@ -1316,9 +1096,9 @@
 												</div><p></p>	
 										
 												<div class="pub-block">
-													<div class="abel h10">Medium Article published- <a href="https://medium.com/@sumaita.bs/is-art-generated-by-artificial-intelligence-really-art-8590f1da3404" target="_blank" class="link-dark "><font color= "magenta">“Is Art Generated by Artificial Intelligence Really Art?”</font></a></span>
+													<div class="abel h10">Medium Article - <a href="https://medium.com/@sumaita.bs/is-art-generated-by-artificial-intelligence-really-art-8590f1da3404" target="_blank" class="link-dark "><span class="entry-link">“Is Art Generated by Artificial Intelligence Really Art?”</span></a></span>
 														
-														<p><font color = "orange">Thursday, Sept 04 2020</font></p></div>
+														<p><span class="entry-date">Thursday, Sept 04 2020</span></p></div>
 					
 													<div class="d-none">
 													  }</div>
@@ -1326,9 +1106,9 @@
 												</div><p></p>	
 
 												<div class="pub-block">
-													<div class="abel h10">Medium Article published- <a href="https://medium.com/@sumaita.bs/writing-your-very-first-code-lets-byte-it-down-pun-very-much-intended-624fa5af79b3" target="_blank" class="link-dark "><font color= "magenta">“Writing Your Very First Code- Let’s Byte it Down *Pun very much intended*”</font></a></span>
+													<div class="abel h10">Medium Article - <a href="https://medium.com/@sumaita.bs/writing-your-very-first-code-lets-byte-it-down-pun-very-much-intended-624fa5af79b3" target="_blank" class="link-dark "><span class="entry-link">“Writing Your Very First Code- Let’s Byte it Down *Pun very much intended*”</span></a></span>
 														
-														<p><font color = "orange">Thursday, Sept 04 2020</font></p></div>
+														<p><span class="entry-date">Thursday, Sept 04 2020</span></p></div>
 					
 													<div class="d-none">
 													  }</div>
@@ -1338,83 +1118,205 @@
 												
 												
 										</div>
+
+												<h4 id="hobbiesH4" class="mt-2">Artistry Kaleidoscope</h4>
+												<p class="mt-1">Like a kaleidoscope's varied patterns, my art takes on diverse forms.</p>
+
+												<div class="clickable mt-4 language">
+												<div class="d-none">https://www.behance.net/sumaitashorif</div>
+												<div class="h5">Digital Art
+
+												</div>
+
+												<img src="assets/img/digital.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
+
+												<div class="blog-info mt-2">
+
+												</div>
+
+												<div class="blog-short mt-2"
+
+												data-en="Step into my Digital Art Gallery – Crafted using Adobe Illustrator, Adobe Draw, and Adobe Fresco, where imagination meets technology. I've brought to life a collection of vibrant artworks. These pieces blur the lines between traditional artistry and modern tools, resulting in a captivating exploration of digital creativity.">
+
+
+												</div>
+
+												</div>
+
+												<div class="clickable mt-4 language">
+												<div class="d-none">https://dribbble.com/SumaitaB</div>
+												<div class="h5">Logos and Printables Design:
+
+												</div>
+
+												<img src="assets/img/logos.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
+
+												<div class="blog-info mt-2">
+
+												</div>
+
+												<div class="blog-short mt-2"
+
+												data-en="From intricately crafted logos that embody distinct identities to delightful printables that add charm to special moments, my work is a canvas of imagination. Each logo captures the essence of its subject, while the printables infuse joy into diverse occasions.">
+
+
+												</div>
+												</div>
+
+												<div class="clickable mt-4 language">
+												<div class="d-none">https://www.instagram.com/keep_yourmouthshut/</div>
+												<div class="h5">Traditional Art
+
+												</div>
+
+												<img src="assets/img/trad.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
+
+												<div class="blog-info mt-2">
+
+												</div>
+
+												<div class="blog-short mt-2"
+
+												data-en="Artistry on Paper and Canvas: Watercolors, Acrylics, and Gouache Creations.">
+
+
+												</div>
+												</div>
+
+
+												<div class="clickable mt-4 language">
+												<div class="d-none">https://www.instagram.com/keep_yourmouthshut/</div>
+												<div class="h5">Conceptual Art
+
+												</div>
+
+												<img src="assets/img/concept.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
+
+												<div class="blog-info mt-2">
+
+												</div>
+
+												<div class="blog-short mt-2"
+
+												data-en="Exploring Boundless Ideas: A Journey into Conceptual Art.">
+
+
+												</div>
+												</div>
+
+												<div class="clickable mt-4 language">
+												<div class="d-none">https://www.instagram.com/keep_yourmouthshut/</div>
+												<div class="h5">Crafts
+
+												</div>
+
+												<img src="assets/img/crafts.png" class="rounded me-auto d-block img-fluid profilepicture" alt="Sumaita Binte Shorif's Profile picture">
+
+												<div class="blog-info mt-2">
+
+												</div>
+
+												<div class="blog-short mt-2"
+
+												data-en="Sculpting Dreams with Clay and Paper: Crafting Wonders with Polymer, Air-Dry Clay, and Origami.">
+
+
+												</div>
+												</div>
+
 									</div>
 									
 
-  <!-- Certificatons -->
-  <div class="col-md-8 offset-md-1 mb-5" id="certificationsContent">
+  <!-- Experience -->
+  <div class="col-md-8 offset-md-1 mb-5" id="experienceContent">
     <div class="container">
         <div class="row mt-2">
 
 			<h4 class="post-title">Research Experience</h4>
 			<div class="pub-block">
-                <div class="abel h10">Graduate Research Assistant, Wayne State University  <br> Aug 2024 - Present </div>
+                <div class="abel h10">Graduate Research Assistant, Wayne State University  <br> Fall 2024 - Present </div>
 
             </div><p></p>
 
             <h4 class="post-title">Work Experience</h4>
 			<div class="pub-block">
-                <div class="abel h10">Lecturer, Bangladesh University of Business and Technology (BUBT) <br>July 1, 2024 - August 13, 2024 
+                <div class="abel h10">Lecturer, Bangladesh University of Business and Technology (BUBT) <br>July 1, 2024 - August 13, 2024
 				<br> Courses Taught: CSE 327: Software Engineering, CSE 328: Software Engineering Laboratory</div>
 
             </div><p></p>
 
+			<h4 class="post-title">Online Certifications</h4>
+
+			<div class="pub-block">
+                <div class="abel h10"> Introduction to Psychology- Coursera <i class="fa-solid fa-link"></i> <a href="https://www.coursera.org/account/accomplishments/certificate/36D29H7A7W6A" target="_blank" rel="noopener" class="link-dark">LINK</a> </div>
+
+            </div><p></p>
+
+            <div class="pub-block">
+                <div class="abel h10"> Introduction to Cybersecurity by Cisco <i class="fa-solid fa-link"></i> <a href="https://www.youracclaim.com/badges/9740d588-4138-43de-89bd-ccb33d917544/linked_in_profile" target="_blank" rel="noopener" class="link-dark">LINK</a> </div>
+
+            </div><p></p>
+
+            <div class="pub-block">
+                <div class="abel h10"> Graphic Elements of Design: Color Theory and Image Formats- Coursera <i class="fa-solid fa-link"></i> <a href="https://www.coursera.org/account/accomplishments/certificate/DCKCRDGVV72C" target="_blank" rel="noopener" class="link-dark">LINK</a> </div>
+
+            </div><p></p>
+
+            <div class="pub-block">
+                <div class="abel h10"> Basic Elements of Design: Design Principles and Software Overview- Coursera <i class="fa-solid fa-link"></i> <a href="https://www.coursera.org/account/accomplishments/certificate/D6Z8CWFKJULZ" target="_blank" rel="noopener" class="link-dark">LINK</a> </div>
+
+            </div><p></p>
+
+            <div class="pub-block">
+                <div class="abel h10"> Networking Academy Learn-A-Thon 2020 by Cisco <i class="fa-solid fa-link"></i> <a href="https://www.youracclaim.com/badges/aa2601ae-9f85-4b51-bfde-73fc432dce6b/linked_in_profile" target="_blank" rel="noopener" class="link-dark">LINK</a> </div>
+
+            </div><p></p>
+
+        </div>
+    </div>
+</div>
+
+  <!-- Education and Certifications -->
+  <div class="col-md-8 offset-md-1 mb-5" id="educationContent">
+    <div class="container">
+        <div class="row mt-2">
+
 			<h4 class="post-title">Education</h4>
-			
-			<div class="pub-block">
-                <div class="abel h10">PhD Candidate, Wayne State University, USA <br> Aug 2024 - Present
+
+			<div class="edu-list">
+
+				<div class="edu-card">
+					<div class="edu-degree">PhD Candidate, Computer Science</div>
+					<div class="edu-meta">Wayne State University, Michigan, USA<br>Advisor: Dr. Amiangshu Bosu<br>GPA: 4.00/4.00<br>Fall 2024 - Present</div>
 				</div>
-            </div><p></p>
-			
-			<div class="pub-block">
-                <div class="abel h10">B.Sc (Hons) in Computer Science and Engineering, Jahangirnagar University, Bangladesh <br>CGPA: 3.82/4.00 (Awarded Merit Based Scholarships in All Semesters), 2019 – 2024 
+
+				<div class="edu-card">
+					<div class="edu-degree">Master of Science with a major in Computer Science</div>
+					<div class="edu-meta">Wayne State University, Michigan, USA<br>GPA: 4.00/4.00<br>Fall 2024 - Winter 2026</div>
 				</div>
-            </div><p></p>
 
-			<div class="pub-block">
-                <div class="abel h10">Higher Secondary Certificate (HSC) 2018- Dhaka Board, GPA: 5.00/5.00
+				<div class="edu-card">
+					<div class="edu-degree">Bachelor of Science in Computer Science and Engineering</div>
+					<div class="edu-meta">Jahangirnagar University, Bangladesh<br>GPA: 3.82/4.00 (Rank: 4/59)<br>(Awarded Merit Based Scholarships in All Semesters), 2019 – 2024</div>
 				</div>
-            </div><p></p>
 
-			<div class="pub-block">
-                <div class="abel h10">Secondary School Certificate (SSC) 2016- Dhaka Board, GPA: 5.00/5.00 (Awarded Government Merit Scholarship)
+				<div class="edu-card">
+					<div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+					<div class="edu-meta">Dhaka Board, 2018<br>GPA: 5.00/5.00</div>
 				</div>
-            </div><p></p>
 
-			<div class="pub-block">
-                <div class="abel h10">O Level: Pearson Edexcel International GCSE 2016
-					Bengali (Grade: A*), Chemistry (Grade A*),Biology (Grade A),MathematicsB (Grade A)
+				<div class="edu-card">
+					<div class="edu-degree">Secondary School Certificate (SSC)</div>
+					<div class="edu-meta">Dhaka Board, 2016<br>GPA: 5.00/5.00 (Awarded Government Merit Scholarship)</div>
 				</div>
-            </div><p></p>
-		 
 
-			<h4 class="post-title">Certifications</h4>
+				<div class="edu-card">
+					<div class="edu-degree">O Level: Pearson Edexcel International GCSE</div>
+					<div class="edu-meta">2016<br>Bengali (Grade: A*), Chemistry (Grade: A*), Biology (Grade: A), Mathematics B (Grade: A)</div>
+				</div>
 
-            <div class="pub-block">
-                <div class="abel h10"> Introduction to Cybersecurity by Cisco  <i class="fa-solid fa-link"></i> <a href=" https://www.youracclaim.com/badges/9740d588-4138-43de-89bd-ccb33d917544/linked_in_profile " target="_blank" class="link-dark ">LINK</a> </div>
+			</div>
 
-            </div><p></p>
-
-            <div class="pub-block">
-                <div class="abel h10"> Graphic Elements of Design: Color Theory and Image Formats- Coursera <i class="fa-solid fa-link"></i> <a href=" https://www.coursera.org/account/accomplishments/certificate/DCKCRDGVV72C " target="_blank" class="link-dark ">LINK</a> </div>
-
-            </div><p></p>
-
-
-
-            <div class="pub-block">
-                <div class="abel h10"> Basic Elements of Design: Design Principles and Software Overview- Coursera <i class="fa-solid fa-link"></i> <a href=" https://www.coursera.org/account/accomplishments/certificate/D6Z8CWFKJULZ " target="_blank" class="link-dark ">LINK</a> </div>
-
-            </div><p></p>
-
-<div class="pub-block">
-                <div class="abel h10"> Networking Academy Learn-A-Thon 2020 by Cisco <i class="fa-solid fa-link"></i> <a href=" https://www.youracclaim.com/badges/aa2601ae-9f85-4b51-bfde-73fc432dce6b/linked_in_profile " target="_blank" class="link-dark ">LINK</a> </div>
-            </div><p></p>
-
-<div class="pub-block">
-                <div class="abel h10"> Introduction to Psychology- Coursera <i class="fa-solid fa-link"></i> <a href=" https://www.coursera.org/account/accomplishments/certificate/36D29H7A7W6A " target="_blank" class="link-dark ">LINK</a> </div>
-
-            </div><p></p>
 
 
 </div>
